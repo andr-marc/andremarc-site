@@ -1,0 +1,27 @@
+@use '../../../assets/colors' as c;
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    a {
+        display: flex;
+        text-decoration: none;
+        color: c.$dark-purple;
+        align-items: center;
+        width: max-content;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        background-color: c.$white;
+
+        &:hover {
+            background-color: c.$french-gray;
+        }
+
+        img {
+            width: 2rem;
+            height: 2rem;
+            margin-right: .5rem;
+        }
+    }
+}
