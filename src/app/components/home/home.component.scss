@@ -1,22 +1,20 @@
-.content {
-    max-width: 90rem;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-}
-
 .profile {
     display: flex;
     flex-direction: row;
     height: max-content;
     align-items: center;
     gap: 2rem;
-    margin: 6rem 0;
+    margin: 6rem 0 3rem;
 
     img {
         border-radius: 50%;
         width: 18dvw;
         height: 18dvw;
+        min-width: 10rem;
+        min-height: 10rem;
+        max-width: 15rem;
+        max-height: 15rem;
+        
     }
 
     .me {
@@ -33,5 +31,25 @@
         span {
             font-size: 2rem;
         }
+    }
+}
+
+.badges {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+    img {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.bio {
+    // max-width: 70%;
+    margin: 0 auto;
+    p {
+        font-size: 1.125rem;
+        line-height: 160%;
+        margin-bottom: .5rem;
     }
 }

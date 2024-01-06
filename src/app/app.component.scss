@@ -2,7 +2,17 @@
 
 .background {
     width: 100dvw;
-    height: 100dvh;
+    min-height: 100dvh;
     background-color: c.$dark-purple;
     color: c.$french-gray;
+    display: flex;
+    justify-content: center;
+
+    .content {
+        max-width: 90rem;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4rem;
+    }
 }
