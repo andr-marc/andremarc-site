@@ -1,6 +1,6 @@
 .profile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: max-content;
     align-items: center;
     gap: 2rem;
@@ -8,8 +8,8 @@
     padding-top: 3rem;
     img {
         border-radius: 50%;
-        width: 18dvw;
-        height: 18dvw;
+        width: 30dvw;
+        height: 30dvw;
         min-width: 10rem;
         min-height: 10rem;
         max-width: 15rem;
@@ -20,12 +20,12 @@
         display: flex;
         flex-direction: column;
         h1 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            line-height: 250%;
+            line-height: 180%;
         }
         span {
-            font-size: 2rem;
+            font-size: 1.2rem;
         }
     }
 }
@@ -34,18 +34,71 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
     img {
         height: 2.5rem;
         width: 2.5rem;
+        margin: .5rem .125rem;
     }
 }
 
 .bio {
     margin: 0 auto;
     margin-bottom: 4rem;
-    p:not(:last-child) {
+    p {
         font-size: 1.125rem;
-        line-height: 160%;
+        line-height: 180%;
+    }
+    p:not(:last-child) {
         margin-bottom: 1rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .profile {
+        flex-direction: row;
+        img {
+            width: 18dvw;
+            height: 18dvw;
+            min-width: 12rem;
+            min-height: 12rem;
+            max-width: 15rem;
+            max-height: 15rem;
+            margin-right: 1rem;
+        }
+        .me {
+    
+            h1 {
+                font-size: 2rem;
+                line-height: 170%;
+            }
+            span {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .bio {
+        p {
+            line-height: 160%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .profile {
+        
+        .me {
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+

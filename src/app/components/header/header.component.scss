@@ -14,18 +14,55 @@ header {
     
     .body {
         max-width: 90rem;
-        width: 100%;
+        width: calc(100%);
+        padding-left: 4rem;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         h1 {
-            margin-right: 5rem;
+            font-size: 1.6rem;
         }
-        nav a {
-            margin-right: 2rem;
-            color: #ddd;
+        nav {
+            display: none;
         }
     }
 }
+
+@media screen and (min-width: 576px) {
+    header {
+        .body {
+            h1 {
+                font-size: 1.6rem;
+                margin-right: .5rem;
+            }
+            nav {
+                display: block;
+                a {
+                    margin-right: 1.5rem;
+                    color: #ddd;
+                    // font-size: .8rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        .body {
+            h1 {
+                margin-right: 5rem;
+            }
+            nav {
+                a {
+                    margin-right: 1.5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
