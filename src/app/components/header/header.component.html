@@ -1,0 +1,10 @@
+<header>
+    <div class="body">
+        <h1>{{ title }}</h1>
+        <nav>
+            @for (link of links; track $index) {
+                <a [href]="link.route">{{ link.title }}</a>
+            }
+        </nav>
+    </div>
+</header>

@@ -5,18 +5,32 @@ h2 {
 }
 
 .text {
-    margin-bottom: 2rem;
-}
+    font-size: 1.125rem;
+    line-height: 170%;
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 2rem;
+    }
 
-.ps {
-    margin-bottom: .5rem;
+    span {
+        background-color: rgba($color: c.$amethyst, $alpha: .3);
+        border-radius: .25rem;
+        padding: 0 .25rem
+    }
+        a {
+            font-weight: bold;
+            color: #ddd;
+            &:hover {
+                color: c.$amethyst;
+            }
+        }
 }
 
 .links {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-bottom: 2rem;
+
     a {
         display: flex;
         text-decoration: none;

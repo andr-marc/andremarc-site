@@ -1,7 +1,7 @@
 @use '../assets/colors' as c;
 
 .background {
-    width: 100dvw;
+    width: 100%;
     min-height: 100dvh;
     background-color: c.$dark-purple;
     color: c.$french-gray;

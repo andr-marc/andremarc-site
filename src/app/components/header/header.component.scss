@@ -1,0 +1,31 @@
+@use '../../../assets/colors' as c;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: c.$dark-purple;
+    height: 5.5rem;
+    box-shadow: 0 1px 10px #12121299;
+    
+    .body {
+        max-width: 90rem;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            margin-right: 5rem;
+        }
+        nav a {
+            margin-right: 2rem;
+            color: #ddd;
+        }
+    }
+}
