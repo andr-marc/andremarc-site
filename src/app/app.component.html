@@ -1,0 +1,187 @@
+<div class="site-frame">
+  <!-- Header / Navigation -->
+  <header class="nav-wrap">
+    <a class="brand" href="#inicio" aria-label="Ir para o início">
+      AM<span>.</span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#stack">Stack</a>
+      <a href="#trajetoria">Trajetória</a>
+    </nav>
+    <a class="nav-cta" href="#contato">
+      Vamos conversar
+    </a>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="availability">
+        <span></span>
+        Disponível para novos desafios
+      </div>
+      <p class="hero-kicker">Full Stack Developer · Natal, RN</p>
+      <h1>
+        Engenharia que transforma
+        <span> desafios reais em produtos digitais.</span>
+      </h1>
+      <p class="hero-copy">
+        Olá, sou <strong>André Marcelino</strong>. Desenvolvo soluções
+        robustas de ponta a ponta com Java, Spring e Angular — da arquitetura
+        ao deploy.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projetos">
+          Explorar projetos
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+        <a class="button button-secondary" href="#contato">
+          Entrar em contato
+        </a>
+      </div>
+      <div class="hero-foot">
+        <span>Role para descobrir</span>
+        <div></div>
+        <span>Java · Spring Boot · Angular · Docker</span>
+      </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics" aria-label="Destaques profissionais">
+      <article>
+        <strong>4+</strong>
+        <span>anos criando soluções ponta a ponta</span>
+      </article>
+      <article>
+        <strong>1k+</strong>
+        <span>usuários impactados por produtos digitais</span>
+      </article>
+      <article>
+        <strong>40+</strong>
+        <span>processos públicos digitalizados</span>
+      </article>
+      <article class="metric-wide">
+        <span class="metric-label">Especialidade</span>
+        <strong class="metric-text">Performance, segurança e impacto.</strong>
+      </article>
+    </section>
+
+    <!-- Deferred Content: @defer (on viewport) nativo do Angular 19 -->
+    @defer (on viewport) {
+      <!-- Projects Section -->
+      <section class="section projects-section" id="projetos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / Projetos selecionados</p>
+            <h2>Produtos que saíram do papel.</h2>
+          </div>
+          <p>
+            Uma seleção de sistemas construídos para resolver problemas reais,
+            simplificar operações e ampliar o acesso a serviços.
+          </p>
+        </div>
+        <div class="project-grid">
+          @for (project of projects(); track project.title) {
+            <article class="project-card" [class.lime]="project.tone === 'lime'" [class.orange]="project.tone === 'orange'" [class.violet]="project.tone === 'violet'">
+              <div class="project-top">
+                <span>{{ project.number }}</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </div>
+              <div class="project-visual">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <div class="visual-line long"></div>
+                <div class="visual-line"></div>
+                <div class="visual-panel"></div>
+              </div>
+              <p class="impact">{{ project.impact }}</p>
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              <div class="tag-list">
+                @for (tag of project.tags; track tag) {
+                  <span>{{ tag }}</span>
+                }
+              </div>
+            </article>
+          }
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills-section" id="stack">
+        <div class="section-heading inverse">
+          <div>
+            <p class="eyebrow">02 / Competências</p>
+            <h2>Stack sólida.<br />Visão completa.</h2>
+          </div>
+          <p>
+            Escolho tecnologia com intenção: arquitetura limpa, código sustentável
+            e entregas que permanecem simples de evoluir.
+          </p>
+        </div>
+        <div class="skills-grid">
+          @for (category of skillCategories(); track category.category; let i = $index) {
+            <article>
+              <span class="skill-number">0{{ i + 1 }}</span>
+              <h3>{{ category.category }}</h3>
+              <div class="skill-tags">
+                @for (item of category.items; track item) {
+                  <span>{{ item }}</span>
+                }
+              </div>
+            </article>
+          }
+        </div>
+      </section>
+
+      <!-- Journey / Timeline Section -->
+      <section class="section journey-section" id="trajetoria">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Trajetória</p>
+            <h2>Evolução contínua,<br />impacto consistente.</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          @for (item of timeline(); track item.role + item.period) {
+            <article>
+              <span class="timeline-date">{{ item.period }}</span>
+              <div>
+                <h3>{{ item.role }}</h3>
+                <p class="company">{{ item.institution }}</p>
+                <p>{{ item.description }}</p>
+              </div>
+            </article>
+          }
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contato">
+        <p class="eyebrow">04 / Contato</p>
+        <h2>Tem um desafio interessante?</h2>
+        <a href="mailto:andre.marcelino.dev@gmail.com">
+          Vamos construir algo relevante
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17 17 7M8 7h9v9" />
+          </svg>
+        </a>
+        <div class="contact-footer">
+          <span>André Marcelino</span>
+          <span>Full Stack Developer · {{ currentYear }}</span>
+        </div>
+      </section>
+    } @placeholder {
+      <div class="section-shell" aria-hidden="true">
+        <div class="skeleton eyebrow-skeleton"></div>
+        <div class="skeleton title-skeleton"></div>
+        <div class="skeleton cards-skeleton"></div>
+      </div>
+    }
+  </main>
+</div>
